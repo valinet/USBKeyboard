@@ -1,6 +1,9 @@
 #ifndef __KEYCODES__
 #define __KEYCODES__
 
+#define MMKEY_VOL_UP			0xE9
+#define MMKEY_VOL_DOWN			0xEA
+#define MMKEY_PLAYPAUSE			0xCD
 
 PROGMEM const uint8_t KEYCODES_LAYOUT_US[96] = {
 	0x2C,	/*	Space	*/
@@ -200,7 +203,7 @@ PROGMEM const uint8_t KEYCODES_LAYOUT_DE[96] = {
 };
 
 
-PROGMEM const char MODIFIER_SHIFT_LAYOUT_US[12] = {
+PROGMEM const uint8_t MODIFIER_SHIFT_LAYOUT_US[12] = {
 	B01111111,	/*		Space	!	"	#	$	%	&	'		*/
 	B11110000,	/*			(	)	*	+	,	-	.	/		*/
 	B00000000,	/*			0	1	2	3	4	5	6	7		*/
@@ -216,7 +219,7 @@ PROGMEM const char MODIFIER_SHIFT_LAYOUT_US[12] = {
 };
 
 
-PROGMEM const char MODIFIER_SHIFT_LAYOUT_DE[12] = {
+PROGMEM const uint8_t MODIFIER_SHIFT_LAYOUT_DE[12] = {
 	B01111111,	/*		Space	!	"	#	$	%	&	'		*/
 	B11100001,	/*			(	)	*	+	,	-	.	/		*/
 	B00000000,	/*			0	1	2	3	4	5	6	7		*/

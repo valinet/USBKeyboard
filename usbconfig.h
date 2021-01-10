@@ -259,8 +259,8 @@ section at the end of this file).
 #define USB_CFG_DEVICE_VERSION  0x00, 0x01
 /* Version number of the device: Minor number first, then major number.
  */
-#define USB_CFG_VENDOR_NAME     'g','i','t','h','u','b','.','c','o','m','/','j','u','l','i','a','n','s','c','h','u','l','e','r'
-#define USB_CFG_VENDOR_NAME_LEN 24
+#define USB_CFG_VENDOR_NAME     'g','i','t','h','u','b','.','c','o','m','/','v','a','l','i','n','e','t'
+#define USB_CFG_VENDOR_NAME_LEN 18
 /* These two values define the vendor name returned by the USB device. The name
  * must be given as a list of characters under single quotes. The characters
  * are interpreted as Unicode (UTF-16) entities.
@@ -269,8 +269,8 @@ section at the end of this file).
  * obdev's free shared VID/PID pair. See the file USB-IDs-for-free.txt for
  * details.
  */
-#define USB_CFG_DEVICE_NAME     'U','S','B','K','e','y','b','o','a','r','d'
-#define USB_CFG_DEVICE_NAME_LEN 11
+#define USB_CFG_DEVICE_NAME     'A','u','d','i','o','P','o','t','+'
+#define USB_CFG_DEVICE_NAME_LEN 9
 /* Same as above for the device name. If you don't want a device name, undefine
  * the macros. See the file USB-IDs-for-free.txt before you assign a name if
  * you use a shared VID/PID.
@@ -297,7 +297,7 @@ section at the end of this file).
  * HID class is 3, no subclass and protocol required (but may be useful!)
  * CDC class is 2, use subclass 2 and protocol 1 for ACM
  */
-#define USB_CFG_HID_REPORT_DESCRIPTOR_LENGTH    63
+#define USB_CFG_HID_REPORT_DESCRIPTOR_LENGTH    173
 /* Define this to the length of the HID report descriptor, if you implement
  * an HID device. Otherwise don't define it or define it to 0.
  * If you use this define, you must add a PROGMEM character array named

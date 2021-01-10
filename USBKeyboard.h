@@ -14,9 +14,9 @@
 #include <avr/pgmspace.h>
 #include <avr/interrupt.h>
 #include <string.h>
-#include <usbdrv.h>
+#include "usbdrv.h"
 #include <Arduino.h>
-#include <keycodes.h>
+#include "keycodes.h"
 
 /* constants */
 #define MODIFIER_CONTROL		(1<<0)
@@ -31,6 +31,15 @@
 /* makros */
 #define conc(a, b)				(a ## b)
 #define concat(a, b)			conc(a, b)
+
+#define REPID_MOUSE         1
+#define REPID_KEYBOARD      2
+#define REPID_MMKEY         3
+#define REPID_SYSCTRLKEY    4
+#define REPSIZE_MOUSE       4
+#define REPSIZE_KEYBOARD    8
+#define REPSIZE_MMKEY       3
+#define REPSIZE_SYSCTRLKEY  2
 
 
 /* global variables */
@@ -107,7 +116,7 @@ public: /*#################### PUBLIC FUNCTIONS ####################*/
 	 ******************************************************/
 	void resetCapsLockToggleCount();
 	
-	
+	void sendMultimediaKey(uint8_t key);
 private: /*################### PRIVATE FUNCTIONS ###################*/
 	/*******************************************************
 	 * Send the keyboard report
